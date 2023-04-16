@@ -36,14 +36,14 @@ class App extends Component {
       ( this.state.mountTime - this.state.fixTime) / 1000
     );
     return (
-      <div>
+      <div className="container">
         <button onClick={this.toggleShow}>Toggle Profile</button>
         {this.state.shows && (
-          <div>
-            <h1>{fullName}</h1>
-            <p>{bio}</p>
+          <div className="profile">
             <img src={imgSrc} alt={fullName} style={{width:150, height:150}}/>
-            <p>{profession}</p>
+            <h3>{fullName}</h3>
+            <p>{bio}</p>
+            <h3>{profession}</h3>
           </div>
         )}
         <p>Mounted {timeSinceMount} seconds ago</p>
